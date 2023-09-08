@@ -13,7 +13,7 @@ int main(void)
 		letter++;
 	}
 
-	int letter = 65;
+	letter = 65;
 
 	while (letter <= 90)
 	{

@@ -25,9 +25,11 @@ void leading_zero(int number)
 
 int main(void)
 {
-	for (int i = 0; i < 99; i++)
+	int i = 0;
+	for (i = 0; i < 99; i++)
 	{
-		for (int j = i + 1; j < 100; j++)
+		int j = 0;
+		for (j = i + 1; j < 100; j++)
 		{
 			leading_zero(i);
 			putchar(' ');

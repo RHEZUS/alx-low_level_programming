@@ -5,7 +5,8 @@
  */
 int main(void)
 {
-	for (int i = 0; i <= 15; i++)
+	int i = 0;
+	for (i = 0; i <= 15; i++)
 	{
 		if (i < 10)
 		{
