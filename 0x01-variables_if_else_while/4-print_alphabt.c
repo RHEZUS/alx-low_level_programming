@@ -10,7 +10,7 @@ int main(void)
 
 	for (letter = 97; letter <= 122; letter++)
 	{
-		if((letter == 101) && (letter == 114)){
+		if((letter == 101) || (letter == 114)){
 			letter++;
 		}
 
