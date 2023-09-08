@@ -6,6 +6,7 @@
 int main(void)
 {
 	int i = 0;
+	
 	for (i = (char)122; i >= (char)97; i--)
 	{
 		putchar(i);
