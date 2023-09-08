@@ -5,19 +5,16 @@
  */
 int main(void)
 {
-	
 	int i = 0;
-	
+
 	for (i = 0; i <= 7; i++)
 	{
-	
 		int j = 0;
-	
+
 		for (j = i + 1; j <= 8; j++)
 		{
-	
 			int k = 0;
-	
+
 			for (k = j + 1; k <= 9; k++)
 			{
 				putchar(i + '0');
