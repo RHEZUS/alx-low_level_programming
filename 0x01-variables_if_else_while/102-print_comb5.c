@@ -36,11 +36,17 @@ int main(void)
 		{
 			leading_zero(i);
 			putchar(' ');
-			leading_zero(j);
-			putchar(',');
-			putchar(' ');
+			leading_zero(i);
+			if (i == 98 && j == 99)
+			{
+				putchar('\n');
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
-	putchar('\n');
 	return (0);
 }
