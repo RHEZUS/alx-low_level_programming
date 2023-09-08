@@ -36,7 +36,7 @@ int main(void)
 		{
 			leading_zero(i);
 			putchar(' ');
-			leading_zero(i);
+			leading_zero(j);
 			if (i == 98 && j == 99)
 			{
 				putchar('\n');
