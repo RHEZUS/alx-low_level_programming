@@ -17,9 +17,8 @@ int main(void)
 		}
 		else
 		{
-			putchar('$');
+			putchar('\n');
 		}
 	}
-	putchar('\n');
 	return (0);
 }
