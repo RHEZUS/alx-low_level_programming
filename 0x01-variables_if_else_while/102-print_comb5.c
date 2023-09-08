@@ -2,7 +2,7 @@
 /**
  * leading_zero - adds a leading zero to one digit numbers
  * Return: 0
- * @parameter: number is the number to be preceded by 0
+ * @number: is the number to which leading 0 will be added
  */
 
 void leading_zero(int number)
