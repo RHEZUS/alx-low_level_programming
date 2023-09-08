@@ -6,12 +6,11 @@
 int main(void)
 {
 	int i = 0;
-	
+
 	for (i = 0; i < 9; i++)
 	{
-
 		int j = 0;
-		
+
 		for (j = i + 1; j <= 9; j++)
 		{
 			if (i == 8 && j == 9)

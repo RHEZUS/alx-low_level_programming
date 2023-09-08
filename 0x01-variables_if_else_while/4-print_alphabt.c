@@ -5,15 +5,14 @@
  */
 int main(void)
 {
-	
 	int letter = 0;
 
 	for (letter = 97; letter <= 122; letter++)
 	{
-		if((letter == 101) || (letter == 113)){
+		if ((letter == 101) || (letter == 113))
+		{
 			letter++;
 		}
-
 		putchar((char) letter);
 	}
 	putchar('\n');
