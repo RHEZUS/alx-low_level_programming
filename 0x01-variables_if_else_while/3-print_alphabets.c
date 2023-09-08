@@ -20,6 +20,7 @@ int main(void)
 		putchar((char) letter);
 		letter++;
 	}
+	putchar('\n');
 	return (0);
 }
 

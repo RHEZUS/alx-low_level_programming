@@ -5,8 +5,7 @@
  */
 int main(void)
 {
-	int letter = 0;
-	for (letter = 97; letter <= 122; letter++)
+	for (int letter = 97; letter <= 122; letter++)
 	{
 		if((letter == 101) && (letter == 114)){
 			letter++;
@@ -14,6 +13,7 @@ int main(void)
 
 		putchar((char) letter);
 	}
+	putchar('\n');
 	return (0);
 }
 
