@@ -11,7 +11,7 @@ int main(void)
 	unsigned long num1 = 0, num2 = 1, next, num1_head;
 	unsigned long num1_tail, num2_head, num2_tail, head, tail;
 
-	for (i = 0; i <= 92; i++)
+	for (i = 0; i < 92; i++)
 	{
 		next = num1 + num2;
 		printf("%lu, ", next);
