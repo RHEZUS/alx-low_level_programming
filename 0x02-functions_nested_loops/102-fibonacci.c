@@ -18,5 +18,6 @@ int main(void)
 		if (i < 50)
 			printf("%s", ", ");
 	}
+	putchar('\n');
 	return (0);
 }
