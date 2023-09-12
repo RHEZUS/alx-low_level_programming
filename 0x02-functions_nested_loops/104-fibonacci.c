@@ -12,11 +12,9 @@ int main(void)
 	for (i = 0; i < 92; i++)
 	{
 		next = num1 + num2;
-		printf("%lu", next);
+		printf("%lu, ", next);
 		num1 = num2;
 		num2 = next;
-		if (i < 98)
-			printf("%s", ", ");
 	}
 	
 	num1_head = num1 / 10000000000;
