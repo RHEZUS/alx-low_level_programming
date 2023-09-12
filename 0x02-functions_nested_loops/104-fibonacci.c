@@ -9,7 +9,7 @@ int main(void)
 {
 	int i;
 	unsigned long num1 = 0, num2 = 1, next , num1_head, num1_tail, num2_head, num2_tail, head, tail;
-	for (i = 0; i < 92; i++)
+	for (i = 0; i <= 92; i++)
 	{
 		next = num1 + num2;
 		printf("%lu, ", next);
@@ -22,7 +22,7 @@ int main(void)
 	num2_head = num2 / 10000000000;
 	num2_tail = num2 % 10000000000;
 
-	for (i = 92; i <= 98; i++)
+	for (i = 93; i <= 98; i++)
 	{
 		head = num1_head + num2_head;
 		tail = num1_tail + num2_tail;
