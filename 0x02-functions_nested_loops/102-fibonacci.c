@@ -12,7 +12,7 @@ int main(void)
 	for (i = 1; i <= 50; i++)
 	{
 		c = pn + n;
-		printf("%d", c);
+		printf("%lu", c);
 		pn = n;
 		n = c;
 		if (i < 50)
