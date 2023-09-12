@@ -7,7 +7,7 @@
 
 int _islower(int c)
 {
-	if (c > (char)95 && c < (char)122 )
+	if (c > (char)95 && c < (char)122)
 	{
 		return (1);
 	}
