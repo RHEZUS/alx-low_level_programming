@@ -9,7 +9,7 @@ int main(void)
 {
 	int i;
 	unsigned long num1 = 0, num2 = 1, next , num1_head, num1_tail, num2_head, num2_tail, head, tail;
-	for (i = 1; i <= 98; i++)
+	for (i = 0; i <= 92; i++)
 	{
 		next = num1 + num2;
 		printf("%lu", next);
