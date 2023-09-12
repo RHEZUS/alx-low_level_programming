@@ -15,13 +15,13 @@ void print_times_table(int n)
 		{
 			for (j = 0; j <= n; j++)
 			{
-				printf("%s", ", ");
 				result = i * j;
-				if (result < 100)
-					putchar (' ');
-				if (result < 10)
-					putchar (' ');
-				printf("%d", result);
+				if ((result < 10) && (i < n))
+					printf("%d,   ", result);
+				else if ((result < 100) && (i < n))
+					printf("%d,  ", result);
+				else
+					printf("%d", result);
 			}
 			putchar('\n');
 		}
