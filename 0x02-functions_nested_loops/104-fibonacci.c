@@ -27,7 +27,7 @@ int main(void)
 	{
 		head = num1_head + num2_head;
 		tail = num1_tail + num2_tail;
-		if (num2_head + num2_tail > 9999999999)
+		if (num1_tail + num2_tail > 9999999999)
 		{
 			head += 1;
 			tail %= 10000000000;
