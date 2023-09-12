@@ -22,13 +22,13 @@ int main(void)
 	num2_head = num2 / 10000000000;
 	num2_tail = num2 % 10000000000;
 
-	for (i = 93; i <= 98; i++)
+	for (i = 92; i <= 98; i++)
 	{
 		head = num1_head + num2_head;
 		tail = num1_tail + num2_tail;
 		if (num2_head + num2_tail > 9999999999)
 		{
-			head /= 1;
+			head += 1;
 			tail %= 10000000000;
 		}
 
