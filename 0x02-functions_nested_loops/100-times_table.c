@@ -23,7 +23,7 @@ void print_times_table(int n)
 				else
 					printf(" %d", result);
 				if (j < n)
-					_putchar(',');
+					putchar(',');
 			}
 			putchar('\n');
 		}
