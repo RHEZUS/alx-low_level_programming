@@ -8,29 +8,17 @@
 void print_number(int n);
 void print_number(int n)
 {
-	int temp;
+	int temp = n;
 
 	if (n < 0)
 	{
-		temp = -1 * n;
-		putchar('-');
-	}
-	else
-	{
-		temp = n;
+		temp = -temp;
+		_putchar('-');
 	}
 
-	if (temp > 1000)
+	if (temp / 10)
 	{
-		_putchar((temp / 1000) % 10 + '0');
-	}
-	if (temp > 100)
-	{
-		_putchar((temp / 100) % 10 + '0');
-	}
-	if (temp > 10)
-	{
-		_putchar((temp / 10) % 10 + '0');
+		print_number(temp / 10);
 	}
 	_putchar(temp % 10 + '0');
 }
