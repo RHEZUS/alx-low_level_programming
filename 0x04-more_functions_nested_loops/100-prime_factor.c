@@ -7,17 +7,13 @@
 
 int main(void)
 {
-	unsigned long i = 2, G_factor = 0, n = 612852475143;
+	unsigned long int i, n = 612852475143;
 
-	while (++i < n / 2)
+	for (i = 2; i < 782848; i++)
 	{
-		if (n % i == 0)
-		{
-			G_factor = i;
-			while (n % i == 0)
-				n /= i;
-		}
+		while (n % i == 0)
+			n /= i;
 	}
-	printf("%ld\n", G_factor);
+	printf("%ld\n", n);
 	return (0);
 }
