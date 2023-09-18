@@ -15,12 +15,12 @@ char generate_random_char()
 }
 
 /**
- * generateRandomPassword - generates a passsword
+ * generate_password - generates a passsword
  * @password: the pointer to the password variable
  * @length: the length of the password
  */
 
-void generateRandomPassword(char *password, int length)
+void generate_password(char *password, int length)
 {
 	int i;
 
@@ -38,11 +38,11 @@ void generateRandomPassword(char *password, int length)
 
 int main(void)
 {
-	const int passwordLength = 8;
-	char password[passwordLength + 1];
+	const int length = 12;
+	char password[length + 1];
 
 	srand(time(NULL));
-	generateRandomPassword(password, passwordLength);
-	printf("Random Password: %s\n", password);
+	generate_password(password, length);
+	printf("%s\n", password);
 	return (0);
 }
