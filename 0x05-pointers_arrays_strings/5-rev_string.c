@@ -16,7 +16,7 @@ void rev_string(char *s)
 	while (str[j] != '\0')
 		j++;
 
-	while (j >= 0)
+	while (a < j)
 	{
 		swap = str[j];
 		str[j] = str[i];
