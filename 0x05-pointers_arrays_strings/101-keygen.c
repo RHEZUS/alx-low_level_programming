@@ -4,8 +4,9 @@
 
 /**
  * generate_random_char - generates a random charracter
- * Return: one character from a list of charracters
+ * Return: one character from a list of charracterst
  */
+
 char generate_random_char()
 {
 	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -37,7 +38,7 @@ void generateRandomPassword(char *password, int length)
 
 int main(void)
 {
-	int passwordLength = 12;
+	const int passwordLength = 12;
 	char password[passwordLength + 1];
 
 	srand(time(NULL));
