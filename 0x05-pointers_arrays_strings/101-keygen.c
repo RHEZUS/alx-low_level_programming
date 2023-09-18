@@ -38,7 +38,8 @@ void generateRandomPassword(char *password, int length)
 int main(void)
 {
 	int passwordLength = 12;
-	char password[passwordLength + 1] = "";
+	char password[];
+
 	srand(time(NULL));
 	generateRandomPassword(password, passwordLength);
 	printf("Random Password: %s\n", password);
