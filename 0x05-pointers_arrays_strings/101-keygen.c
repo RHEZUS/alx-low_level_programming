@@ -9,7 +9,6 @@
 char generate_random_char()
 {
 	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-	//randomly select an index in the
 	int index = rand() % (sizeof(charset) - 1);
 	return charset[index];
 }
@@ -22,7 +21,9 @@ char generate_random_char()
 
 void generateRandomPassword(char *password, int length)
 {
-	for (int i = 0; i < length; i++) {
+	int i;
+
+	for (i = 0; i < length; i++) {
 		password[i] = generate_random_char();
 	}
 	password[length] = '\0';
@@ -37,7 +38,7 @@ void generateRandomPassword(char *password, int length)
 int main(void)
 {
 	srand(time(NULL));
-	int passwordLength = 12; // Change this to your desired password length
+	int passwordLength = 12;
 	char password[passwordLength + 1];
 	generateRandomPassword(password, passwordLength);
 	printf("Random Password: %s\n", password);
