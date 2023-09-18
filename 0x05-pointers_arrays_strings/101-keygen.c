@@ -39,7 +39,7 @@ void generateRandomPassword(char *password, int length)
 int main(void)
 {
 	const int passwordLength = 12;
-	char password[passwordLength + 1];
+	char password[passwordLength];
 
 	srand(time(NULL));
 	generateRandomPassword(password, passwordLength);
