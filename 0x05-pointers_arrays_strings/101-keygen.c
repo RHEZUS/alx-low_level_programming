@@ -38,8 +38,8 @@ void generate_password(char *password, int length)
 
 int main(void)
 {
-	const int length = 83;
-	char password[84];
+	const int length = 12;
+	char password[13];
 
 	srand(time(NULL));
 	generate_password(password, length);
