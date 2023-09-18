@@ -38,7 +38,7 @@ void generateRandomPassword(char *password, int length)
 int main(void)
 {
 	int passwordLength = 12;
-	char password[];
+	char password[passwordLength + 1];
 
 	srand(time(NULL));
 	generateRandomPassword(password, passwordLength);
