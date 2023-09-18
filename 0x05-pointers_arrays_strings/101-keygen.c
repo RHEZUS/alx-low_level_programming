@@ -12,6 +12,6 @@ int main(void)
 
 	srand(time(NULL));
 	password = rand();
-	print("%d", password);
+	printf("%d", password);
 	return (0);
 }
