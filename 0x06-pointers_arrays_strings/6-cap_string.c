@@ -17,7 +17,7 @@ int isSpecialChar(char c)
 		case '.':
 		case '!':
 		case '?':
-		case '"':
+		case '\"':
 		case '(':
 		case ')':
 		case '{':
