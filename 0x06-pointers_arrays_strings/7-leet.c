@@ -9,16 +9,16 @@
 char *leet(char *s)
 {
 	int i = 0, j = 0;
-	char c [] = "aAeEoOtTlL";
-	char cd [] = "4433007711";
+	char *c = "aAeEoOtTlL";
+	char *cd = "4433007711";
 
 	while (s[i] != '\0')
 	{
-		while (c != '\0')
+		while (c[j] != '\0')
 		{
 			if (s[i] == c[j])
 				s[i] = cd[j];
-			j++
+			j++;
 		}
 		j = 0;
 		i++;
