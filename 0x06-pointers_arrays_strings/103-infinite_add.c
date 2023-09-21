@@ -1,6 +1,33 @@
 #include "main.h"
 
 /**
+ * rev_string - reverses strings
+ * @n: the string to reverse
+ */
+
+void rev_string(char *n)
+{
+	int i = 0;
+	int j = 0;
+	char temp;
+
+	while (*(n + i) != '\0')
+	{
+		i++;
+	}
+	i--;
+
+	for (j = 0; j < i; j++, i--)
+	{
+		temp = *(n + j);
+		*(n + j) = *(n + i);
+		*(n + i) = temp;
+	}
+}
+
+
+
+/**
  * infinite_add - makes addition of numbers
  * @n1: the first number
  * @n2: the second number
@@ -8,47 +35,46 @@
  * @size_r: the size of the buffer
  * Return: the addition's result
  */
-
-
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int size_n1, size_n2, solution, remain = 0;
-	int s = size_r - 1;
+	int i = 0, j = 0, s = 0, remain = 0, solution = 0, val1, val2;
 
-	while (n1[size_n1] != '\0')
-		size_n1++;
-	while (n2[size_n2] != '\0')
-		size_n2++;
-
-	while (size_n1 >= 0 || size_n2 >= 0)
+	while (n1[i] != '\0')
+		i++;
+	while (n2[j] != '\0')
+		j++;
+	i--;
+	j--;
+	if (j >= size_r || i >= size_r)
+		return (0);
+	while (i >= 0 || j >= 0 || remain == 1)
 	{
-		if (size_n1 >= 0 && size_n2 >= 0)
+		if (i < 0)
+			val1 = 0;
+		else
+			val1 = n1[i] - '0';
+		if (j < 0)
+			val2 = 0;
+		else
+			val2 = n2[j] - '0';
+		solution = val1 + val2 + remain;
+		if (solution >= 10)
 		{
-			solution = (int)(n1[size_n1] + n2[size_n2]) + remain;
-		}
-		else if (size_n1 >= 0 && size_n2 < 0)
-		{
-			solution = (int)(n1[size_n1]) + remain;
-		}
-		else if (size_n1 < 0 && size_n2 >= 0)
-		{
-			solution = (int)(n2[size_n2]) + remain;
-		}
-
-		if (solution > 10)
-		{
-			r[s] = (char)(solution - 10);
+			*(r + s) = (solution - 10) + '0';
 			remain = 1;
 		}
 		else
 		{
-			r[s] = (char)solution;
+			*(r + s) = solution + '0';
 			remain = 0;
 		}
-		s--;
-		size_n1--;
-		size_n2--;
+		s++;
+		i--;
+		j--;
 	}
+	if (s == size_r)
+		return (0);
+	r[s] = '\0';
+	rev_string(r);
 	return (r);
-
 }
