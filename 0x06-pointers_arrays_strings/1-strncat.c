@@ -15,7 +15,7 @@ int _strlen(char *str)
 }
 
 /**
- * _strcat - Concats two strings
+ * _strncat - Concats two strings
  * @dest: The string to which characters will be added
  * @src: The strings from which characters will be taken
  * @n: The number of string to be concatened

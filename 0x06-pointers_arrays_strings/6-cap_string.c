@@ -1,10 +1,13 @@
 #include "main.h"
 
 /**
- * */
-int isSpecialChar(char c) 
+ * isSpecialChar - checks if a character is a word seperator
+ * @c: the charactre to be checked
+ * Return: 0 if the character is not e seperator and 1 otherwise
+ */
+int isSpecialChar(char c)
 {
-	switch (c) 
+	switch (c)
 	{
 		case ' ':
 		case '\t':
@@ -19,16 +22,22 @@ int isSpecialChar(char c)
 		case ')':
 		case '{':
 		case '}':
-			return 1;
+			return (1);
 		default:
-			return 0;
+			return (0);
 	}
 }
+
+/**
+ * cap_string - capitalises the first letters of every word in a string
+ * @s: the string to be ccapitalised
+ * Return: the capitalised string
+ */
 
 char *cap_string(char *s)
 {
 	int i = 0;
-	
+
 	while (s[i] != '\0')
 	{
 		if (isSpecialChar(s[i]))

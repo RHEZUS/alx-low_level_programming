@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- *
- * */
+ * leet - replaces some letters of words to encode a string
+ * @s: the string to be encoded
+ * Return: a crypted string
+ */
 
 char *leet(char *s)
 {
