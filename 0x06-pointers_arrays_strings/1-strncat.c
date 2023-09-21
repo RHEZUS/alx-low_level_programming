@@ -24,13 +24,14 @@ int _strlen(char *str)
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int destLen = _strlen(dest);
+	int l = _strlen(dest);
 	int i = 0;
 
 	while (src[i] != '\0' && i < n)
 	{
-		dest[destLen + i] = src[i];
+		dest[l] = src[i];
 		i++;
+		l++;
 	}
 	dest[n] = '\0';
 	return (dest);
