@@ -4,12 +4,14 @@
  * _strstr - returns the pointer to the first occurence of alocated substring
  * @haystack: the string
  * @needle:the substring
- * */
+ * Return: the pointer to the first match or 0
+ */
 
 char *_strstr(char *haystack, char *needle)
 {
 	int i = 0, j = 0;
 	char *strstart;
+
 	while (haystack[i] != '\0')
 	{
 		strstart = &haystack[i];
@@ -20,7 +22,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (needle[j] == '\0')
 		{
-			return strstart;
+			return (strstart);
 		}
 		j = 0;
 		i++;

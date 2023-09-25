@@ -12,6 +12,7 @@
 int check_char (char *s, char c)
 {
 	int i;
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
@@ -23,7 +24,7 @@ int check_char (char *s, char c)
 
 
 /**
- * strspn - gets the length of a prefix substring
+ * _strspn - gets the length of a prefix substring
  * @s: the initial segment
  * @accept: the substring
  * Return: the length of the substring

@@ -12,6 +12,7 @@
 int check_char (char *s, char c)
 {
 	int i;
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
@@ -23,7 +24,7 @@ int check_char (char *s, char c)
 
 
 /**
- * strspn - gets the first character matching one of the characters in a string
+ * _strpbrk - gets the first matching character in a string
  * @s: the initial segment
  * @accept: the substring
  * Return: the first matching character if found and null if not
