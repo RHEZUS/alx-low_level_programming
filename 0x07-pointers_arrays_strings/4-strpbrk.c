@@ -1,28 +1,3 @@
-#include "main.h"
-
-
-
-/**
- * check_char - checks id a string has a character
- * @c:charcter
- * @s:string
- * Return: 1 if yes and 0 if no
- */
-
-int check_char (char *s, char c)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		if (s[i] == c)
-			return (1);
-	}
-
-	return (0);
-}
-
-
 /**
  * _strpbrk - gets the first matching character in a string
  * @s: the initial segment
@@ -32,14 +7,16 @@ int check_char (char *s, char c)
 
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i;
+	int k;
 
-	for (i = 0; s[i] != ' '; i++)
+	while (*s)
 	{
-		if (check_char(accept, s[i]))
+		for (k = 0; accept[k]; k++)
 		{
-			return (&s[i]);
+			if (*s == accept[k])
+				return (s);
 		}
+		s++;
 	}
-	return (NULL);
+	return ('\0');
 }
