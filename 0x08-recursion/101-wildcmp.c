@@ -18,7 +18,6 @@ int check_equal(char *s1, char *s2, int i, int j)
 		return (check_equal(s1, s2, i, j + 1));
 	if (s2[j] == '*')
 		return (check_equal(s1, s2, i + 1, j) || check_equal(s1, s2, i, j + 1));
-    
 	return (0);
 }
 
@@ -31,5 +30,5 @@ int check_equal(char *s1, char *s2, int i, int j)
 
 int wildcmp(char *s1, char *s2)
 {
-	return check_equal(s1, s2, 0, 0);
+	return (check_equal(s1, s2, 0, 0));
 }

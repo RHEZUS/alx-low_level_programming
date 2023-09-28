@@ -5,7 +5,7 @@
  * @s: the string
  * Return: the length of a string and 0 if it is empty
  */
-int str_len (char *s)
+int str_len(char *s)
 {
 	if (*s != '\0')
 		return (1 + str_len(s + 1));
@@ -13,9 +13,9 @@ int str_len (char *s)
 }
 
 /**
- * checks if a string is palyndrom
+ * check_pal - if a string is palyndrom
  * @start: the first index of the string
- * @last: the last index of the string
+ * @end: the last index of the string
  * @s: the string
  * Return: 1 if it is a palyndrom an 0 otherwise
  */
@@ -24,10 +24,10 @@ int check_pal(int start, int end, char *s)
 {
 	if (s[start] == s[end])
 	{
-		if (start > end/2)
+		if (start > end / 2)
 			return (1);
 		else
-			return check_pal(start + 1, end - 1, s);
+			return (check_pal(start + 1, end - 1, s));
 	}
 	else
 		return (0);
@@ -41,5 +41,5 @@ int check_pal(int start, int end, char *s)
 
 int is_palindrome(char *s)
 {
-	return (check_pal(0, str_len(s)-1, s));
+	return (check_pal(0, str_len(s) - 1, s));
 }
