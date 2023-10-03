@@ -3,7 +3,8 @@
 /**
  * argstostr - concatenates all the arguments of your program.
  * @ac: the number of arguments
- * @av a string of argumenrs
+ * @av: a string of argumenrs
+ * Return: a pointer to the new array or null if it fails
  */
 
 char *argstostr(int ac, char **av)
@@ -21,12 +22,12 @@ char *argstostr(int ac, char **av)
 
 		while (str[j++] != '\0')
 			len++;
-		len ++;
+		len++;
 	}
 
 	strArr = (char *)malloc((len + 1) * sizeof(char));
 	if (strArr == NULL)
-		return(NULL);
+		return (NULL);
 	for (i = 0, j = 0; i < ac && j < len; i++)
 	{
 		str = av[i];

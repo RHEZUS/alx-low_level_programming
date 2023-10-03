@@ -36,5 +36,5 @@ int **alloc_grid(int width, int height)
 			gridArr[i][j] = 0;
 		}
 	}
-	return (gridArr);	
+	return (gridArr);
 }
