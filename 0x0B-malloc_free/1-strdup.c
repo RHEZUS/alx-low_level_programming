@@ -17,18 +17,19 @@ char *_strdup(char *str)
 	{
 		size++;
 	}
-	size--;
+	size++;
 
 	strArr = malloc(size * sizeof(char));
 
 	if (strArr == NULL)
 		return (NULL);
 
-	while (i <= size)
+	while (i < size)
 	{
 		strArr[i] = str[i];
 		i++;
 	}
+	strArr[size] = '\0';
 
 	return (strArr);
 }
