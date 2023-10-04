@@ -16,7 +16,7 @@ char **strtow(char *str)
 	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
 	len = strArraylen(str) - 1;
-	strArr = (char **)malloc(len * sizeof(char *));
+	strArr = (char **)malloc(len * sizeof(char *) + 1);
 
 	if (strArr == NULL)
 	{
@@ -36,6 +36,7 @@ char **strtow(char *str)
 		}
 		i++;
 	}
+	strArr[len + 1] = NULL;
 	return (strArr);
 }
 
