@@ -23,18 +23,17 @@ char **strtow(char *str)
 		return (NULL);
 	}
 
-	while (str[i] != '\0')
+	while (str[i++] != '\0')
 	{
 		if (str[i] != ' ')
 		{
 			start = i;
-			while (str[i] != ' ')
+			while (str[i] != ' ' && str[i] != '\0')
 				i++;
 			end = i;
 			strArr[j] = util(start, end, str);
 			j++;
 		}
-		i++;
 	}
 	strArr[len + 1] = NULL;
 	return (strArr);
