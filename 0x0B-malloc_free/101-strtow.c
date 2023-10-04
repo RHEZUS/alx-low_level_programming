@@ -25,9 +25,9 @@ char **strtow(char *str)
 
 	while (str[i++] != '\0')
 	{
-		if (str[i] != ' ')
+		if (str[i - 1] != ' ')
 		{
-			start = i;
+			start = i - 1;
 			while (str[i] != ' ' && str[i] != '\0')
 				i++;
 			end = i;
