@@ -34,16 +34,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	strArr = (char *)malloc(sizeof(char) * len + 1);
 	if (strArr == NULL)
 		return (NULL);
-	for (i = 0; i < len; i++)
-	{
-		if (i < lenS1)
-			strArr[i] = s1[j];
-		if (i  == lenS1)
-			j = 0;
-		if (i > lenS1)
-			strArr[i] = s2[j];
-		j++;
-	}
+	for (i = 0; i < lenS1; i++)
+		strArr[i] = s1[i];
+	for (i = 0; i < n; i++)
+		strArr[i + lenS1] = s2[i];
+	
 	strArr[len] = '\0';
 	return (strArr);
 }
