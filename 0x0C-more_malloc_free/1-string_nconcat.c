@@ -27,20 +27,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		while (s2[lenS2] != '\0')
 			lenS2++;
 	}
-	if (n >= lenS2)
+	if (n > lenS2)
 		n = lenS2;
 	len = lenS1 + n;
 
-	strArr = (char *)malloc(sizeof(char) * len);
+	strArr = (char *)malloc(sizeof(char) * len + 1);
 	if (strArr == NULL)
 		return (NULL);
 	for (i = 0; i < len; i++)
 	{
-		if (i <= lenS1 - 1)
+		if (i < lenS1)
 			strArr[i] = s1[j];
 		if (i  == lenS1)
 			j = 0;
-		if (i >= lenS1)
+		if (i > lenS1)
 			strArr[i] = s2[j];
 		j++;
 	}
