@@ -2,7 +2,6 @@
 
 /**
  * print_dog -  prints a struct dog
- * @dog: the structure
  * @d: the pointer to the structure
  */
 

@@ -2,7 +2,7 @@
 
 /**
  * free_dog -  frees dogs.
- * @dog_t *d: the pointer to the dog
+ * @d: the pointer to the dog
  */
 
 
