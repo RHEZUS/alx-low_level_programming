@@ -45,7 +45,6 @@ int main(int argc, char *argv[])
 {
 	char buffer[BUFFER_SIZE];
 	int file_from, file_to, bytes_read = 0, bytes_written = 0;
-	mode_t file_perm;
 
 	if (argc != 3)
 	{
@@ -56,15 +55,17 @@ int main(int argc, char *argv[])
 	file_from = open(argv[1], O_RDONLY);
 	check_error(file_from, argv[1], -1, -1, 98, "Can't read from file");
 
-	file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-	file_to  = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, file_perm);
+	file_to  = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	check_error(file_to, argv[2], file_from, -1, 99, "Can't write to file");
 
-	while ((bytes_read = read(file_from, buffer, BUFFER_SIZE)) > 0)
+	while (bytes_read == BUFFER_SIZE)
 	{
+		bytes_read = read(file_from, buffer, BUFFER_SIZE);
 		check_error(bytes_read, argv[1], file_from, file_to, 98
 		, "Can't read from file");
 		bytes_written = write(file_to, buffer, bytes_read);
+		if (bytes_read != bytes_written)
+			bytes_written = -1;
 		check_error(bytes_written, argv[2], file_from, file_to, 99
 		, "Can't write to file");
 	}
