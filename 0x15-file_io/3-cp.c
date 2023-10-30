@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	file_to  = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0666);
+	file_to  = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
 	{
 		close(file_from);
