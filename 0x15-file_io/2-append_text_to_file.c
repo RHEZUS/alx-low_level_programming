@@ -20,14 +20,14 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (file == -1)
 		return (-1);
-	if (text_content != NULL)	
+	if (text_content != NULL)
 		flag = write(file, text_content, strlen(text_content) - 1);
 
 	close(file);
 
 	if (flag == -1)
 		return (-1);
-	
+
 	return (1);
 
 }
