@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Compile all C files in the current directory
-for file in *.c; do
+for file in test/*.c; do
     if [ -f "$file" ]; then
         gcc -Wall -fPIC -c "$file"
     fi
