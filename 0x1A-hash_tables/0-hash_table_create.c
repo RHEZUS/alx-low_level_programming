@@ -3,10 +3,11 @@
 /**
  * hash_table_create - creates a hash-table
  * @size: the size of the table
- * return: the newly created table
+ * Return: the newly created table
  */
 
-hash_table_t *hash_table_create(unsigned long int size){
+hash_table_t *hash_table_create(unsigned long int size)
+{
 	hash_table_t *hash_table = malloc(sizeof(hash_table_t));
 	unsigned long int i = 0;
 

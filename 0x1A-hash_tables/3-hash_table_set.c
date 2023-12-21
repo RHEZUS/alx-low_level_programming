@@ -4,12 +4,13 @@
  * create_node - Creates a new node
  * @key: the key
  * @value: the value of the node
- * return: the new node
+ * Return: the new node
  */
 
 hash_node_t *create_node(const char *key, const char *value)
 {
 	hash_node_t *new_node = malloc(sizeof(hash_node_t));
+
 	if (!new_node)
 		return (NULL);
 	new_node->key = strdup(key);
@@ -24,13 +25,13 @@ hash_node_t *create_node(const char *key, const char *value)
  * @ht: the hash table
  * @key: the key
  * @value: the value of the node
- * return: 0 or 1
+ * Return: 0 or 1
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new_node;
-	unsigned long int index; 
+	unsigned long int index;
 	hash_node_t *current_index;
 
 	if (!key || strcmp(key, "") == 0)
@@ -54,7 +55,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			ht->array[index] = new_node;
 			/*return(1);*/
 		}
-        
+
 	}
 	else
 	{

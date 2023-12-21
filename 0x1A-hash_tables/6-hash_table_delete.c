@@ -3,9 +3,9 @@
 /**
  * hash_table_delete - Frees a hash table
  * @ht: the hash table
- * return: nothing
+ * Return: nothing
  */
- 
+
 void hash_table_delete(hash_table_t *ht)
 {
 	hash_node_t *current;

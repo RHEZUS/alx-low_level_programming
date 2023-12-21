@@ -3,16 +3,16 @@
 /**
  * hash_djb2 - hashes a string
  * @str: the size of the table
- * return: an integer value
+ * Return: an integer value
  */
 
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	int c; 
+	int c;
 	unsigned long int hash;
-	
+
 	hash = 5381;
-	while((c = *str++))
+	while ((c = *str++))
 		hash += (hash << 5) + c;
-	return hash;
+	return (hash);
 }
