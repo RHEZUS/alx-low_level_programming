@@ -62,9 +62,7 @@ shash_node_t *create_node(const char *key, const char *value)
 		free(new_node);
 		return (NULL);
 	}
-	new_node->next = NULL;
-	new_node->snext = NULL;
-	new_node->sprev = NULL;
+	new_node->next = new_node->snext = new_node->sprev = NULL;
 	return (new_node);
 }
 
@@ -235,7 +233,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 	current = ht->stail;
 	while (current != NULL)
 	{
-		if (comma_needed)
+		if (comma_needed == 1)
 			printf(", ");
 
 		printf("'%s': '%s'", current->key, current->value);
