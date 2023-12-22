@@ -70,28 +70,28 @@ shash_node_t *create_node(const char *key, const char *value)
  */
 void add_to_sorted_list(shash_table_t *table, shash_node_t *node)
 {
-	shash_node_t *current;
+	shash_node_t *tmp;
 
 	if (table->shead == NULL && table->stail == NULL)
 	{
 		table->shead = table->stail = node;
 		return;
 	}
-	current = table->shead;
-	while (current != NULL)
+	tmp = table->shead;
+	while (tmp != NULL)
 	{
-		if (strcmp(node->key, current->key) < 0)
+		if (strcmp(node->key, tmp->key) < 0)
 		{
-			node->snext = current;
-			node->sprev = current->sprev;
-			current->sprev = node;
+			node->snext = tmp;
+			node->sprev = tmp->sprev;
+			tmp->sprev = node;
 			if (node->sprev != NULL)
 				node->sprev->snext = node;
 			else
 				table->shead = node;
 			return;
 		}
-		current = current->next;
+		tmp = tmp->snext;
 	}
 	node->sprev = table->stail;
 	table->stail->snext = node;
