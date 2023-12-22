@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.embeddedhtml": "html",
-        "main.h": "c"
+        "main.h": "c",
+        "hash_tables.h": "c"
     }
 }
